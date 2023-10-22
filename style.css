@@ -1,0 +1,203 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+}
+
+.css-1ginftm {
+    width: 13px;
+    height: 13px;
+}
+
+.taboolaLink {
+    text-decoration: none;
+}
+
+/*** article CSS**/
+.articleHeader {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px 20px 0 20px;
+}
+
+h1 {
+    margin: 0;
+}
+
+article {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+p {
+    line-height: 1.6;
+}
+
+footer {
+    border: 1px solid #3333330d;
+}
+
+.floatButton {
+    position: fixed;
+    bottom: 20px;
+    left: 50px;
+    background-color: #007BFF;
+    background-image: url(/assets/taboola_image.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: none;
+    border-radius: 49%;
+    padding: 29px 32px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.floatButton:hover {
+    transform: scale(1.05);
+}
+
+.floatButton::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-3%);
+    width: 102px;
+}
+
+.floatButton:hover::before {
+    visibility: visible;
+    opacity: 1;
+}
+
+/**widget CSS**/
+div.container {
+    padding: 0;
+    max-width: 1169px;
+    margin: auto;
+}
+
+.widgetHeader{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0 10px;
+    width: 100%;
+}
+
+header p.disclosure {
+    margin: 30px 0;
+    padding: 0;
+    margin-bottom: 0;
+    font-size: 13px;
+}
+
+header p a span svg {
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
+
+header h2 {
+    margin-bottom: 0;
+}
+
+section {
+    padding: 0 5px 5px 5px;
+    margin: 0;
+    width: 100%;
+}
+
+ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 5px;
+    justify-items: center;
+    padding: 0;
+    width: 100%;
+}
+
+@media only screen and (max-width: 1170px) {
+    ul {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media only screen and (max-width: 870px) {
+    ul {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    ul {
+        grid-template-columns: 1fr;
+    }
+}
+
+li {
+    width: 280px;
+    border: 1px solid rgb(205 207 210 / 15%);
+    border-radius: 11px;
+}
+
+li img {
+    width: 100%;
+    height: 170px;
+    transition: max-width 500ms;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+li h2 {
+    font-size: 17px;
+    color: black;
+    margin-top: 0;
+    padding: 0 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+li h2:hover {
+    color: rgb(117, 117, 117);
+}
+
+li p {
+    font-size: 13px;
+    color: #000000d1;
+    padding: 0 5px;
+    -webkit-line-clamp: 3;
+}
+
+li a {
+    text-decoration: none;
+}
